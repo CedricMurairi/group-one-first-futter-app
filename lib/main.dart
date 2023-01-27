@@ -140,10 +140,70 @@ class SecondPage extends StatelessWidget {
                 padding: MaterialStatePropertyAll(
                     EdgeInsets.symmetric(vertical: 30, horizontal: 30))),
             child: const Text("Click to view next widget implementation"),
-            onPressed: () => {},
+            onPressed: () => {Navigator.of(context).pushNamed("/fourth")},
           ),
         ],
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class FourthPage extends StatelessWidget {
+  const FourthPage({super.key, required this.title});
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+        actions: [
+          PopupMenuButton(
+            onSelected: (value) {
+              // your logic
+            },
+            itemBuilder: (BuildContext bc) {
+              return const [
+                PopupMenuItem(
+                  child: Text("Home"),
+                  value: '/home',
+                ),
+                PopupMenuItem(
+                  child: Text("About"),
+                  value: '/about',
+                ),
+                PopupMenuItem(
+                  child: Text("Service"),
+                  value: '/service',
+                ),
+                PopupMenuItem(
+                  child: Text("Contact"),
+                  value: '/contact',
+                )
+              ];
+            },
+          )
+        ],
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+            color: Colors.white,
+            width: 300,
+            height: 300,
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        label: const Text('Add'),
+        icon: const Icon(Icons.add),
+        backgroundColor: Colors.green,
+      ),
     );
   }
 }
