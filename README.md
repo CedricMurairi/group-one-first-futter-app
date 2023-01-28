@@ -16,12 +16,13 @@ This is a documentation for the following Flutter widgets:
 ## Container
 
 The Container widget is a convenience widget that combines common painting, positioning, and sizing widgets.
-Properties
 
-    child : The widget that will be contained.
-    alignment : How to align the child within the container.
-    padding : The amount of space to insert between the child and the edges of the container.
-    color : The background color of the container.
+`Properties`
+
+`child` : The widget that will be contained.
+`alignment` : How to align the child within the container.
+`padding` : The amount of space to insert between the child and the edges of the container.
+`color` : The background color of the container.
 
 ### Examples
 
