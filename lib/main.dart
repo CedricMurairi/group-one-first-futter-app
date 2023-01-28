@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(title: 'Group One Assignment'),
-        '/second': (context) => const SecondPage(title: "Second Page")
+        '/second': (context) => const SecondPage(title: "Second Page"),
+        '/fourth': (context) => const FourthPage(title: "Fourth Page")
         // '/third': (context) => const ThirdPage(title: "Second Page")
         // '/fourth': (context) => const FourthPage(title: "Second Page")
       },
@@ -166,20 +167,20 @@ class FourthPage extends StatelessWidget {
             itemBuilder: (BuildContext bc) {
               return const [
                 PopupMenuItem(
-                  child: Text("Home"),
                   value: '/home',
+                  child: Text("Home"),
                 ),
                 PopupMenuItem(
-                  child: Text("About"),
                   value: '/about',
+                  child: Text("About"),
                 ),
                 PopupMenuItem(
-                  child: Text("Service"),
                   value: '/service',
+                  child: Text("Service"),
                 ),
                 PopupMenuItem(
-                  child: Text("Contact"),
                   value: '/contact',
+                  child: Text("Contact"),
                 )
               ];
             },
