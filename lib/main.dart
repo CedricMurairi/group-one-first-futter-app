@@ -195,6 +195,15 @@ class FourthPage extends StatelessWidget {
             width: 300,
             height: 300,
           ),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 40.0),
+            child: Text(
+              "Widgets Implemented: Floating Action Button, Menu items",
+              textAlign: TextAlign.center,
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+            ),
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
