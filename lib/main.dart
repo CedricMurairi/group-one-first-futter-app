@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import "dart:math";
 
+import 'package:group_one_first_project/splash.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => const MyHomePage(title: 'Group One Assignment'),
+        '/': (context) => const SplashScreen(),
         '/second': (context) => const SecondPage(title: "Second Page"),
         '/third': (context) => const ThirdPage(title: "Third Page"),
         '/fourth': (context) => const FourthPage(title: "Fourth Page"),
@@ -340,9 +342,7 @@ class FourthPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed:{	  
-          print("Adding more stuff. Hahahah. Hahahahaa");
-        },
+        onPressed: () {},
         label: const Text('Add'),
         icon: const Icon(Icons.add),
       ),
